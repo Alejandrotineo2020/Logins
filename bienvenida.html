@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mensaje"></h1>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+    <script>
+        const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+
+        if (!usuario) {
+            window.location.href = "index.html";
+        } else {
+            document.getElementById("mensaje").textContent = "¡Bienvenido, " + usuario.name + "!";
+        }
+
+        function cerrarSesion() {
+            localStorage.removeItem("usuarioActivo");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
