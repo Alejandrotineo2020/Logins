@@ -30,8 +30,7 @@ loginForm.addEventListener("submit", function(e) {
         alert("Usuario no registrado. Por favor regístrate.");
         flipCard.classList.add("flipped");
     }
-    }
-);
+});
 
 registerForm.addEventListener("submit", function(e) {
     e.preventDefault();
