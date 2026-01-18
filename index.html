@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <title>Iniciar sesión</title>
 </head>
 <body>
     <div class="container">
@@ -12,48 +12,34 @@
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <form id="loginForm">
-                        <h1 style="color: black; text-align: center;">Login</h1>
-                        <input type="text" placeholder="Username" required>
-                        <input type="password" placeholder="Password" required>
-                        <div style="position: relative;">
-                            <input type="checkbox" id="rememberPassword">
-                            <label for="rememberPassword">Remember Password</label>
-                            <div class="password-toggle" onclick="togglePasswordVisibility()">
-
-
-                            </div>
-                        </div>
-                        <button type="submit">Login</button>    
+                        <h1 style="color: black; text-align: center;">Iniciar sesión</h1>
+                        <input type="text" id="loginUsername" placeholder="Usuario" required>
+                        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                        
+                        <button type="submit">Entrar</button>    
                     </form>
 
-                    <span class="toggle-text" id="registerText">Register</span>
-                        <p class="author-credit">Alejandro M.Tineo Moreta </p>
-
+                    <span class="toggle-text" id="registerText">Crear cuenta</span>
+                    <p class="author-credit">Alejandro M. Tineo Moreta</p>
                 </div>
+
                 <div class="flip-card-back">
                     <form id="registerForm">
-                        <h1 style="color: black; text-align: center;">Register</h1>
-                        <input type="text" placeholder="Name" required>
-                        <input type="text" placeholder="Username" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Password" required>
-                        <button type="submit">Register</button>
-                        
+                        <h1 style="color: black; text-align: center;">Registrarse</h1>
+                        <input type="text" id="registerName" placeholder="Nombre" required>
+                        <input type="text" id="registerUsername" placeholder="Usuario" required>
+                        <input type="email" id="registerEmail" placeholder="Correo" required>
+                        <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                        <button type="submit">Registrarse</button>
                     </form>
-                    <span class="toggle-text" id="loginText">Back to login</span>
-                  <p class="author-credit">Alejandro M.Tineo Moreta </p>
 
+                    <span class="toggle-text" id="loginText">Volver al login</span>
+                    <p class="author-credit">Alejandro M. Tineo Moreta</p>
                 </div>
-
             </div>
-
         </div>
-
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
